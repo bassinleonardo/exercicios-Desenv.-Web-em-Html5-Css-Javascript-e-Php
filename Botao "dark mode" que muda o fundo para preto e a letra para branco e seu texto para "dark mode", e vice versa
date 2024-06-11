@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+            color: black;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="modo-texto">Modo Claro</h1>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+            var modoTexto = document.getElementById("modo-texto");
+            if (body.classList.contains("dark-mode")) {
+                modoTexto.innerText = "Dark Mode";
+            } else {
+                modoTexto.innerText = "Modo Claro";
+            }
+        }
+    </script>
+</body>
+</html>
