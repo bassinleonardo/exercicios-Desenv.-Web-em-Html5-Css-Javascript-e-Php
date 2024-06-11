@@ -1,0 +1,27 @@
+function contarVogais(frase) {
+    // Converte a frase para minúsculas para facilitar a comparação
+    frase = frase.toLowerCase();
+    
+    // Define um conjunto de vogais
+    var vogais = "aeiou";
+    
+    // Inicializa o contador de vogais
+    var contador = 0;
+    
+    // Itera sobre cada caractere da frase
+    for (var i = 0; i < frase.length; i++) {
+        // Verifica se o caractere atual é uma vogal
+        if (vogais.indexOf(frase[i]) !== -1) {
+            // Se for uma vogal, incrementa o contador
+            contador++;
+        }
+    }
+    
+    // Retorna o número de vogais encontradas na frase
+    return contador;
+}
+
+// Exemplo de uso
+var frase = "Olá, mundo!";
+var numeroVogais = contarVogais(frase);
+console.log("A frase '" + frase + "' possui " + numeroVogais + " vogais.");
