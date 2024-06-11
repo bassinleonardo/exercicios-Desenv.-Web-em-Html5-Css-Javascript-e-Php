@@ -1,0 +1,12 @@
+#cachorro {
+    width: 200px;
+    height: 200px;
+    background-image: url('cachorro_feliz.jpg'); /* Imagem do cachorro feliz */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#cachorro.triste {
+    background-image: url('cachorro_triste.jpg'); /* Imagem do cachorro triste */
+}
