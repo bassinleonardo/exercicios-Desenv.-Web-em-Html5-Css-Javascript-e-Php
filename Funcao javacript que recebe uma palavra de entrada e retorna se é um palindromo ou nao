@@ -1,0 +1,18 @@
+function verificaPalindromo(palavra) {
+    // Remove espaços e converte para minúsculas para evitar discrepâncias de capitalização
+    palavra = palavra.toLowerCase().replace(/\s/g, '');
+
+    // Inverte a palavra
+    var palavraInvertida = palavra.split('').reverse().join('');
+
+    // Verifica se a palavra original é igual à palavra invertida
+    return palavra === palavraInvertida;
+}
+
+// Exemplo de uso
+var palavra = "arara";
+if (verificaPalindromo(palavra)) {
+    console.log(palavra + " é um palíndromo.");
+} else {
+    console.log(palavra + " não é um palíndromo.");
+}
